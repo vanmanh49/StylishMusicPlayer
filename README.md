@@ -1,8 +1,11 @@
-# A Stylish Music Player
+# Music Player
 
 
-![Artboard](materials/Artboard.png)
+## Screenshots
 
+<img src="/materials/1.png" alt="Screenshot" height="480" width="270"> <img src="/materials/2.png" alt="Screenshot" height="480" width="270">
+<img src="/materials/3.png" alt="Screenshot" height="480" width="270"> <img src="/materials/4.png" alt="Screenshot" height="480" width="270">
+<img src="/materials/5.png" alt="Screenshot" height="480" width="270">
 
 ## Acknowledgements
 
