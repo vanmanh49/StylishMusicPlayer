@@ -31,10 +31,10 @@
 
         <service android:name=".player.PlaybackService">
             <intent-filter>
-                <action android:name="io.github.ryanhoo.music.ACTION.PLAY_TOGGLE"/>
-                <action android:name="io.github.ryanhoo.music.ACTION.PLAY_NEXT"/>
-                <action android:name="io.github.ryanhoo.music.ACTION.PLAY_LAST"/>
-                <action android:name="io.github.ryanhoo.music.ACTION.STOP_SERVICE"/>
+                <action android:name="music.ACTION.PLAY_TOGGLE"/>
+                <action android:name="music.ACTION.PLAY_NEXT"/>
+                <action android:name="music.ACTION.PLAY_LAST"/>
+                <action android:name="music.ACTION.STOP_SERVICE"/>
             </intent-filter>
         </service>
     </application>

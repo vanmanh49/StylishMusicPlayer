@@ -14,7 +14,6 @@ import butterknife.OnCheckedChanged;
 import io.github.ryanhoo.music.R;
 import io.github.ryanhoo.music.ui.base.BaseFragment;
 import io.github.ryanhoo.music.ui.local.all.AllLocalMusicFragment;
-import io.github.ryanhoo.music.ui.local.folder.FolderFragment;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -32,20 +31,14 @@ public class LocalFilesFragment extends BaseFragment {
 
     static final int DEFAULT_SEGMENT_INDEX = 0;
 
-    @BindViews({R.id.radio_button_all, R.id.radio_button_folder})
-    List<RadioButton> segmentedControls;
+    List<Fragment> mFragments = new ArrayList<>(1);
 
-    List<Fragment> mFragments = new ArrayList<>(2);
-
-    final int[] FRAGMENT_CONTAINER_IDS = {
-            R.id.layout_fragment_container_all, R.id.layout_fragment_container_folder
-    };
+    final int FRAGMENT_CONTAINER_IDS = R.id.layout_fragment_container_all;
 
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         mFragments.add(new AllLocalMusicFragment());
-        mFragments.add(new FolderFragment());
     }
 
     @Nullable
@@ -60,26 +53,8 @@ public class LocalFilesFragment extends BaseFragment {
         ButterKnife.bind(this, view);
 
         FragmentTransaction fragmentTransaction = getFragmentManager().beginTransaction();
-        for (int i = 0; i < mFragments.size(); i++) {
-            Fragment fragment = mFragments.get(i);
-            fragmentTransaction.add(FRAGMENT_CONTAINER_IDS[i], fragment, fragment.getTag());
-            fragmentTransaction.hide(fragment);
-        }
-        fragmentTransaction.commit();
-
-        segmentedControls.get(DEFAULT_SEGMENT_INDEX).setChecked(true);
-    }
-
-    @OnCheckedChanged({R.id.radio_button_all, R.id.radio_button_folder})
-    public void onSegmentedChecked(RadioButton radioButton, boolean isChecked) {
-        int index = segmentedControls.indexOf(radioButton);
-        Fragment fragment = mFragments.get(index);
-        FragmentTransaction fragmentTransaction = getFragmentManager().beginTransaction();
-        if (isChecked) {
-            fragmentTransaction.show(fragment);
-        } else {
-            fragmentTransaction.hide(fragment);
-        }
+            Fragment fragment = mFragments.get(0);
+            fragmentTransaction.add(FRAGMENT_CONTAINER_IDS, fragment, fragment.getTag());
         fragmentTransaction.commit();
     }
 }

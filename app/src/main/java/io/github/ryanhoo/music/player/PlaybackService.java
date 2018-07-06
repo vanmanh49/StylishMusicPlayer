@@ -25,10 +25,10 @@ import io.github.ryanhoo.music.utils.AlbumUtils;
  */
 public class PlaybackService extends Service implements IPlayback, IPlayback.Callback {
 
-    private static final String ACTION_PLAY_TOGGLE = "io.github.ryanhoo.music.ACTION.PLAY_TOGGLE";
-    private static final String ACTION_PLAY_LAST = "io.github.ryanhoo.music.ACTION.PLAY_LAST";
-    private static final String ACTION_PLAY_NEXT = "io.github.ryanhoo.music.ACTION.PLAY_NEXT";
-    private static final String ACTION_STOP_SERVICE = "io.github.ryanhoo.music.ACTION.STOP_SERVICE";
+    private static final String ACTION_PLAY_TOGGLE = "music.ACTION.PLAY_TOGGLE";
+    private static final String ACTION_PLAY_LAST = "music.ACTION.PLAY_LAST";
+    private static final String ACTION_PLAY_NEXT = "music.ACTION.PLAY_NEXT";
+    private static final String ACTION_STOP_SERVICE = "music.ACTION.STOP_SERVICE";
 
     private static final int NOTIFICATION_ID = 1;
 

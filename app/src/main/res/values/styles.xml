@@ -119,14 +119,6 @@
         <item name="android:layout_centerInParent">true</item>
     </style>
 
-    <style name="MP.Theme.Widget.SegmentedControl.Left">
-        <item name="android:background">@drawable/selector_segmented_left</item>
-    </style>
-
-    <style name="MP.Theme.Widget.SegmentedControl.Right">
-        <item name="android:background">@drawable/selector_segmented_right</item>
-    </style>
-
     <!-- TextAppearance -->
 
     <style name="MP.Theme.TextAppearance">
