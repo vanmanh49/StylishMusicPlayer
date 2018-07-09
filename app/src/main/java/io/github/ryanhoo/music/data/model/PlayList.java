@@ -11,13 +11,6 @@ import io.github.ryanhoo.music.player.PlayMode;
 
 import java.util.*;
 
-/**
- * Created with Android Studio.
- * User: ryan.hoo.j@gmail.com
- * Date: 9/5/16
- * Time: 5:53 PM
- * Desc: PlayList
- */
 @Table("playlist")
 public class PlayList implements Parcelable {
 

@@ -18,13 +18,6 @@ import rx.Subscription;
 import rx.subscriptions.CompositeSubscription;
 import uk.co.chrisjenx.calligraphy.CalligraphyContextWrapper;
 
-/**
- * Created with Android Studio.
- * User: ryan.hoo.j@gmail.com
- * Date: 3/15/16
- * Time: 8:12 PM
- * Desc: BaseActivity
- */
 public abstract class BaseActivity extends AppCompatActivity {
 
     private CompositeSubscription mSubscriptions;
